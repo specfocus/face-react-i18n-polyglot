@@ -1,0 +1,50 @@
+{
+  "name": "@specfocus/view-focus.i18n.polyglot",
+  "description": "airbnb/polyglot.js provider",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/specfocus/view-focus.i18n.polyglot.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "start-dx": "tsdx watch",
+    "build-dx": "tsdx build",
+    "test-dx": "tsdx test",
+    "lint-dx": "tsdx lint",
+    "prepare-dx": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "build": "rimraf dist && tsc",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "exjest": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "test": "yarn exjest --coverage",
+    "test:ci": "yarn exjest --ci",
+    "test:watch": "yarn exjest --watch"
+  },
+  "author": "Lucas M. Oromi",
+  "license": "MIT",
+  "dependencies": {
+    "node-polyglot": "^2.4.2"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@specfocus/view-focus.i18n": "^0.0.6",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.3.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "jest-extended": "^1.2.0",
+    "rimraf": "^3.0.2",
+    "size-limit": "^7.0.8",
+    "ts-jest": "^27.1.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.4"
+  },
+  "pperDependencies": {
+    "@specfocus/view-focus.i18n": "^0.0.6"
+  }
+}
